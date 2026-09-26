@@ -49,3 +49,19 @@ textarea {
     background-size: 24px 24px;
   }
 }
+/* Mobile screen responsive fixes */
+@media (max-width: 768px) {
+  /* Background image fix for mobile */
+  [class*="bg-[url"], 
+  .hero-bg {
+    background-size: cover !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Mobile spacing fix */
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
