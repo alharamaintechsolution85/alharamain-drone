@@ -49,19 +49,29 @@ textarea {
     background-size: 24px 24px;
   }
 }
-/* Mobile screen responsive fixes */
+/* Mobile Image & Layout Fix - Desktop Unchanged */
 @media (max-width: 768px) {
-  /* Background image fix for mobile */
-  [class*="bg-[url"], 
-  .hero-bg {
-    background-size: cover !important;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
+  /* Hero card & image wrapper fix */
+  section img,
+  [class*="Hero"] img,
+  .relative img {
+    max-height: 280px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    border-radius: 1rem !important;
   }
 
-  /* Mobile spacing fix */
+  /* Reduce huge height of container */
+  section, 
+  div[class*="min-h-"] {
+    min-height: auto !important;
+  }
+
+  /* Compact spacing between elements */
   section {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
   }
 }
